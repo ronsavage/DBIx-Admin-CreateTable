@@ -8,7 +8,7 @@ print "The tests in t/syntax.error.t will only by run if \$DBI_DSN, \$DBI_USER a
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 
-WriteMakefile
+my(%params) =
 (
 	($] ge '5.005') ?
 	(
