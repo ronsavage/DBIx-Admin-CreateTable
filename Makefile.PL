@@ -45,3 +45,34 @@ WriteMakefile
 	EXE_FILES		=> [],
 );
 
+if ( ($ExtUtils::MakeMaker::VERSION =~ /^\d\.\d\d$/) && ($ExtUtils::MakeMaker::VERSION > 6.30) )
+{
+	$params{LICENSE} = 'perl';
+}
+
+if ($ExtUtils::MakeMaker::VERSION ge '6.46')
+{
+	$params{META_MERGE} =
+	{
+		'meta-spec' =>
+		{
+			version => 2,
+		},
+		resources   =>
+		{
+			bugtracker =>
+			{
+				web => 'https://github.com/ronsavage/DBIx-Admin-CreateTable/issues',
+			},
+			license		=> 'http://opensource.org/licenses/Perl',
+			repository	=>
+			{
+				type	=> 'git',
+				url		=> 'https://github.com/ronsavage/DBIx-Admin-CreateTable.git',
+				web		=> 'https://github.com/ronsavage/DBIx-Admin-CreateTable',
+			},
+		},
+	};
+}
+
+WriteMakefile(%params);

@@ -44,4 +44,4 @@
 ^MYMETA.yml$
 ^MYMETA\.json$
 
-^Config-Tiny-.*
+^DBIx-Admin-CreateTable-.*
