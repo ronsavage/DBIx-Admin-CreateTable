@@ -5,14 +5,14 @@ use warnings;
 
 # I tried 'require'-ing modules but that did not work.
 
-use Config::Tiny; # For the version #.
+use DBIx::Admin::CreateTable; # For the version #.
 
 use Test::More;
 
-use File::Spec;
-use File::Temp;
+use DBI;
+use Moo;
 use strict;
-use utf8;
+use warnings;
 
 # ----------------------
 
@@ -20,13 +20,13 @@ pass('All external modules loaded');
 
 my(@modules) = qw
 /
-	File::Spec
-	File::Temp
+	DBI
+	Moo
 	strict
-	utf8
+	warnings
 /;
 
-diag "Testing Config::Tiny V $Config::Tiny::VERSION";
+diag "Testing DBIx::Admin::CreateTable V $DBIx::Admin::CreateTable::VERSION";
 
 for my $module (@modules)
 {
