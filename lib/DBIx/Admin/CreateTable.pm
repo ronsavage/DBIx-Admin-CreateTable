@@ -351,7 +351,7 @@ are named after both the table and the column.
 
 new(...) returns an object of type C<DBIx::Admin::CreateTable>.
 
-This is the class contructor.
+This is the class constructor.
 
 Usage: DBIx::Admin::CreateTable -> new().
 
